@@ -1,24 +1,31 @@
 
 def main():
     print("----- AVATAR ----- ")
+
     answer = str(input("Select an Avatar or create your own:\n"))
 
+    # Uses while loop to control the answer that is inputted.
     while answer != 'Jeff' and answer != 'Adam' and answer != 'Chris' and answer != 'custom' and answer != 'exit':
         answer = str(input("Select an Avatar or create your own:\n"))
-
+    # ----------------------------------
+    # Block of function calls that do not need further input from user
     if answer == 'Jeff':
         print()
-        Jeff()
+        jeff()
     if answer == 'Adam':
         print()
-        Adam()
+        adam()
     if answer == 'Chris':
         print()
-        Chris()
+        chris()
+    # ----------------------------------
+    # Requires more input from user introduces variables ( hat_style, eyes, hair,
+    # arm_style, torso_length, leg_length, shoe_style)
+    # Then calls functions passing needed variables as parameters.
     if answer == 'custom':
         print("Answer the following questions to create a custom avatar")
         hat_style = str(input('Hat style ?\n'))
-        eyes= str(input('Character for eyes ?\n'))
+        eyes = str(input('Character for eyes ?\n'))
         hair = str(input('Shaggy hair (True/False) ?\n'))
         arm_style = str(input('Arm style ?\n'))
         torso_length = int(input("Torso length ?\n"))
@@ -26,13 +33,16 @@ def main():
         shoe_style = str(input("Shoe look ?\n"))
         print()
         hat(hat_style)
-        head(eyes,hair)
+        head(eyes, hair)
         arm(arm_style)
         torso(torso_length)
-        legs(leg_length,shoe_style)
+        legs(leg_length, shoe_style)
+
+# Static function that prints Jeff avatar
 
 
-def Jeff():
+def jeff():
+
     print("       ~-~")
     print("     /-~-~-\ ")
     print(" ___/_______\___")
@@ -48,7 +58,12 @@ def Jeff():
     print("     /// \\\\\\")
     print("    ///   \\\\\\")
     print("#HHH#       #HHH#")
-def Adam():
+
+# Static function that prints Adam avatar
+
+
+def adam():
+
     print("       ~-~")
     print("     /-~-~-\ ")
     print("    /_______\\___")
@@ -68,7 +83,11 @@ def Adam():
     print("   ///     \\\\\\")
     print("<|||>       <|||>")
 
-def Chris():
+# Static function that prints adam avatar
+
+
+def chris():
+
     print("       ~-~")
     print("     /-~-~-\ ")
     print("    /_______\ ")
@@ -101,11 +120,13 @@ def hat(style):
         print("       ~-~")
         print("     /-~-~-\ ")
         print(" ___/_______\ ")
-    if style ==  'both':
+    if style == 'both':
         print("       ~-~")
         print("     /-~-~-\ ")
         print(" ___/_______\___ ")
-def head(eye,hair):
+
+
+def head(eye, hair):
     if hair == 'True':
         print('    |"""""""|')
     else:
@@ -115,14 +136,18 @@ def head(eye,hair):
     print("    |  ~~~  |")
     print("     \_____/")
 
+
 def arm(style):
     print(" 0"+style+style+style+style+"|---|"+style+style+style+style+"0")
+
 
 def torso(height):
     i = 0
     while i < height:
         print("      |-X-|")
         i += 1
+
+
 def legs(length,shoe_style):
     print("      HHHHH")
 
@@ -135,5 +160,7 @@ def legs(length,shoe_style):
     if length > 3:
         print("  ///       \\\\\\")
     print(shoe_style+"       "+shoe_style)
+
+
 main()
 
