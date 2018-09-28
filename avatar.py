@@ -1,3 +1,9 @@
+# Author:   Brandon Waldron
+# Project:  Avatar
+# Description:  Asks the user if they would like to select an avatar or to create their own.
+# If they select an avatar it prints off one using a static function. If they want to create
+# their own then it asks the user for their preferences then generates a custom avatar for them.
+
 
 def main():
     print("----- AVATAR ----- ")
