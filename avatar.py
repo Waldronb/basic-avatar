@@ -19,21 +19,21 @@ def main():
         print()
         chris()
     # ----------------------------------
-    # Requires more input from user introduces variables ( hat_style, eyes, hair,
+    # Requires more input from user introduces variables ( hat_style, eye_style, hair_style,
     # arm_style, torso_length, leg_length, shoe_style)
     # Then calls functions passing needed variables as parameters.
     if answer == 'custom':
         print("Answer the following questions to create a custom avatar")
         hat_style = str(input('Hat style ?\n'))
-        eyes = str(input('Character for eyes ?\n'))
-        hair = str(input('Shaggy hair (True/False) ?\n'))
+        eye_style = str(input('Character for eye_style ?\n'))
+        hair_style = str(input('Shaggy hair_style (True/False) ?\n'))
         arm_style = str(input('Arm style ?\n'))
         torso_length = int(input("Torso length ?\n"))
         leg_length = int(input("Leg length (1-4) ?\n"))
         shoe_style = str(input("Shoe look ?\n"))
         print()
         hat(hat_style)
-        head(eyes, hair)
+        head(eye_style, hair_style)
         arm(arm_style)
         torso(torso_length)
         legs(leg_length, shoe_style)
@@ -106,6 +106,8 @@ def chris():
     print("  ///       \\\\\\")
     print("<>-<>       <>-<>")
 
+# The hat function takes the parameter style from main then the if statements manage which style is printed.
+
 
 def hat(style):
     if style == 'front':
@@ -125,6 +127,9 @@ def hat(style):
         print("     /-~-~-\ ")
         print(" ___/_______\___ ")
 
+# The head function takes in 2 parameters from main eye which is passed to the function and prints out and
+# hair which is evaluated by the if statement to determine if the avatar should have shaggy hair.
+
 
 def head(eye, hair):
     if hair == 'True':
@@ -136,9 +141,13 @@ def head(eye, hair):
     print("    |  ~~~  |")
     print("     \_____/")
 
+# The arn function takes the parameter style from main then the if statements manage which style is printed.
+
 
 def arm(style):
     print(" 0"+style+style+style+style+"|---|"+style+style+style+style+"0")
+
+# The torso function takes the parameter height from main then the while statement prints the correct torso height.
 
 
 def torso(height):
@@ -147,8 +156,11 @@ def torso(height):
         print("      |-X-|")
         i += 1
 
+# The leg function takes the parameters length and shoe_style from main. Then the if statements determine which
+# tier of leg height to print. After the legs print the shoe_style is just printed.
 
-def legs(length,shoe_style):
+
+def legs(length, shoe_style):
     print("      HHHHH")
 
     if length > 0:
