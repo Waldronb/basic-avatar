@@ -38,7 +38,7 @@ def main():
         torso(torso_length)
         legs(leg_length, shoe_style)
 
-# Static function that prints Jeff avatar
+# Static function that prints jeff avatar
 
 
 def jeff():
@@ -59,7 +59,7 @@ def jeff():
     print("    ///   \\\\\\")
     print("#HHH#       #HHH#")
 
-# Static function that prints Adam avatar
+# Static function that prints adam avatar
 
 
 def adam():
@@ -83,7 +83,7 @@ def adam():
     print("   ///     \\\\\\")
     print("<|||>       <|||>")
 
-# Static function that prints adam avatar
+# Static function that prints chris avatar
 
 
 def chris():
